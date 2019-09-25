@@ -1,7 +1,12 @@
 "use strict";
-import MainContent from "components/MainContent";
+
+// import MainContent from "MainContent.js";
 
 const e = React.createElement;
+
+const MainContent = () => {
+  return <p>Hi back</p>;
+};
 
 class App extends React.Component {
   constructor(props) {
