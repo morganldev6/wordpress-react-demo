@@ -32,7 +32,7 @@ const Header = ({ title }) => {
 const Main = () => {
   return (
     <React.Fragment>
-      <Section className="whitebg" subhead="This is section One" />
+      <Section className="bg" subhead="This is section One" />
       <Section subhead="This is section Two" />
     </React.Fragment>
   );
