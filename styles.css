@@ -1,9 +1,33 @@
-body {
-  background-color: lavender;
+html {
+  font-size: 125%;
+  font-family: "Open Sans", sans-serif;
 }
 
-header {
+body {
+  background-color: lavender;
+  margin: 0;
+}
+
+.wrapper {
   margin: 0 auto;
   width: 75%;
   max-width: 1200px;
+}
+
+h1,
+h2 {
+  font-family: "PT Serif", serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+header,
+section {
+  height: 100vh;
+}
+
+.whitebg {
+  background-color: #fff;
 }

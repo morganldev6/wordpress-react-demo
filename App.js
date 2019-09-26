@@ -20,6 +20,60 @@ var MainContent = function MainContent() {
   );
 };
 
+var Header = function Header(_ref) {
+  var title = _ref.title;
+
+  return React.createElement(
+    "header",
+    null,
+    React.createElement(
+      "div",
+      { className: "wrapper" },
+      React.createElement(
+        "h1",
+        null,
+        title
+      ),
+      React.createElement(
+        "p",
+        null,
+        "This site demonstrates the use of a WordPress headless CMS for backend with a React frontend built on top."
+      )
+    )
+  );
+};
+
+var Section = function Section(_ref2) {
+  var subhead = _ref2.subhead,
+      className = _ref2.className;
+
+  return React.createElement(
+    "section",
+    { className: className },
+    React.createElement(
+      "div",
+      { className: "wrapper" },
+      React.createElement(
+        "h2",
+        null,
+        subhead
+      )
+    )
+  );
+};
+
+var Footer = function Footer() {
+  return React.createElement(
+    "footer",
+    null,
+    React.createElement(
+      "div",
+      { className: "wrapper" },
+      "\xA9 2019"
+    )
+  );
+};
+
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -38,16 +92,14 @@ var App = function (_React$Component) {
       return React.createElement(
         React.Fragment,
         null,
+        React.createElement(Header, { title: "WordPress Headless CMS with a React Frontend" }),
         React.createElement(
-          "header",
+          "main",
           null,
-          React.createElement(
-            "h1",
-            null,
-            "Hello World"
-          )
+          React.createElement(Section, { className: "whitebg", subhead: "This is section One" }),
+          React.createElement(Section, { subhead: "This is section Two" })
         ),
-        React.createElement(MainContent, null)
+        React.createElement(Footer, null)
       );
     }
   }]);
