@@ -1,12 +1,6 @@
 "use strict";
 
-// import MainContent from "MainContent.js";
-
 const e = React.createElement;
-
-const MainContent = () => {
-  return <p>Hi back</p>;
-};
 
 const Header = ({ title }) => {
   return (
@@ -17,8 +11,30 @@ const Header = ({ title }) => {
           This site demonstrates the use of a WordPress headless CMS for backend
           with a React frontend built on top.
         </p>
+        <nav className="mainNav">
+          <ul>
+            <li>
+              <a href="/wordpress-demo/about">About</a>
+            </li>
+            <li>
+              <a href="/wordpress-demo/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/wordpress-demo/links">Links</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
+  );
+};
+
+const Main = () => {
+  return (
+    <React.Fragment>
+      <Section className="whitebg" subhead="This is section One" />
+      <Section subhead="This is section Two" />
+    </React.Fragment>
   );
 };
 
@@ -35,7 +51,10 @@ const Section = ({ subhead, className }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="wrapper">© 2019</div>
+      <div className="wrapper">
+        <p>This is the footer</p>
+        <p>© 2019</p>
+      </div>
     </footer>
   );
 };
@@ -50,10 +69,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header title="WordPress Headless CMS with a React Frontend" />
-        <main>
-          <Section className="whitebg" subhead="This is section One" />
-          <Section subhead="This is section Two" />
-        </main>
+        <Main />
         <Footer />
       </React.Fragment>
     );

@@ -1,7 +1,5 @@
 "use strict";
 
-// import MainContent from "MainContent.js";
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11,14 +9,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var e = React.createElement;
-
-var MainContent = function MainContent() {
-  return React.createElement(
-    "p",
-    null,
-    "Hi back"
-  );
-};
 
 var Header = function Header(_ref) {
   var title = _ref.title;
@@ -38,8 +28,52 @@ var Header = function Header(_ref) {
         "p",
         null,
         "This site demonstrates the use of a WordPress headless CMS for backend with a React frontend built on top."
+      ),
+      React.createElement(
+        "nav",
+        { className: "mainNav" },
+        React.createElement(
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "/wordpress-demo/about" },
+              "About"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "/wordpress-demo/contact" },
+              "Contact"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "/wordpress-demo/links" },
+              "Links"
+            )
+          )
+        )
       )
     )
+  );
+};
+
+var Main = function Main() {
+  return React.createElement(
+    React.Fragment,
+    null,
+    React.createElement(Section, { className: "whitebg", subhead: "This is section One" }),
+    React.createElement(Section, { subhead: "This is section Two" })
   );
 };
 
@@ -69,7 +103,16 @@ var Footer = function Footer() {
     React.createElement(
       "div",
       { className: "wrapper" },
-      "\xA9 2019"
+      React.createElement(
+        "p",
+        null,
+        "This is the footer"
+      ),
+      React.createElement(
+        "p",
+        null,
+        "\xA9 2019"
+      )
     )
   );
 };
@@ -93,12 +136,7 @@ var App = function (_React$Component) {
         React.Fragment,
         null,
         React.createElement(Header, { title: "WordPress Headless CMS with a React Frontend" }),
-        React.createElement(
-          "main",
-          null,
-          React.createElement(Section, { className: "whitebg", subhead: "This is section One" }),
-          React.createElement(Section, { subhead: "This is section Two" })
-        ),
+        React.createElement(Main, null),
         React.createElement(Footer, null)
       );
     }
