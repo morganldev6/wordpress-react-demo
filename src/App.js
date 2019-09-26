@@ -16,10 +16,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <header>
-        <h1>Hello World</h1>
+      <React.Fragment>
+        <header>
+          <h1>Hello World</h1>
+        </header>
         <MainContent />
-      </header>
+      </React.Fragment>
     );
   }
 }

@@ -36,12 +36,16 @@ var App = function (_React$Component) {
     key: "render",
     value: function render() {
       return React.createElement(
-        "header",
+        React.Fragment,
         null,
         React.createElement(
-          "h1",
+          "header",
           null,
-          "Hello World"
+          React.createElement(
+            "h1",
+            null,
+            "Hello World"
+          )
         ),
         React.createElement(MainContent, null)
       );
