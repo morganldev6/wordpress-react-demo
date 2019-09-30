@@ -8,8 +8,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import Sentence from "./src/components/Sentence.js";
-
 var e = React.createElement;
 
 var Header = function Header(_ref) {
@@ -122,43 +120,19 @@ var Footer = function Footer() {
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
 
-  function App(props) {
+  function App() {
     _classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    _this.state = { movies: [] };
-    return _this;
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
   }
 
   _createClass(App, [{
-    key: "fetchPostData",
-    value: function fetchPostData() {
-      var _this2 = this;
-
-      fetch("http://localhost/wordpress-demo/wp-json/wp/v2/movies?per_page=100").then(function (response) {
-        return response.json();
-      }).then(function (myJSON) {
-        // Logic goes here
-        console.log(myJSON);
-        console.log("it worked");
-        _this2.setState({ movies: myJSON });
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("component mounted");
-      this.fetchPostData();
-    }
-  }, {
     key: "render",
     value: function render() {
       return React.createElement(
         React.Fragment,
         null,
-        React.createElement(Sentence, null),
-        React.createElement(Header, { title: "WordPress Headless CMS with a React Frontend WUT" }),
+        React.createElement(Header, { title: "WordPress Headless CMS with a React Frontend" }),
         React.createElement(Main, null),
         React.createElement(Footer, null)
       );
