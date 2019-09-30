@@ -1,4 +1,5 @@
 "use strict";
+import Sentence from "./src/components/Sentence.js";
 
 const e = React.createElement;
 
@@ -84,7 +85,8 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header title="WordPress Headless CMS with a React Frontend" />
+        <Sentence />
+        <Header title="WordPress Headless CMS with a React Frontend WUT" />
         <Main />
         <Footer />
       </React.Fragment>
